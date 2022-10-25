@@ -1,0 +1,46 @@
+głupoty Ubuntu
+killall snap-store
+kasujesz randomowe gówno imagemagic -> wypierdziela inkscape'a...
+Brak sensownego odpowiednika Painta (Pinta - joke, gdzie kurwa resize)
+
+
+DESKTOP SHORTCUT DESTINATIONS:
+/usr/share/applications/
+var/lib/snapd/desktop/applications/
+
+ENVIRONMENT VARIABLES:
+Session based variables:
+~/.pam_environment	strange syntax, parsed before .profile
+~/.profile		
+~/.bashrc, ~/.bash_profile ~/.bash_login ...
+			defined env variables are seen only in terminal
+Global variables:
+/etc/profile		sources directory /etc/profile.d
+/etc/profile.d		here we make system-wide env. variables
+/etc/bash.bashrc	defined env variables are seen only in terminal
+
+Git-credential-manager (po instalacji):
+git-credential-manager-core configure
+git config --global credential.credentialStore cache (works for 15 minutes...)
+git config --global credential.credentialStore gpg (needed 'gpg' and 'pass')
+(przy kolejnym koncie wystarczy się zalogować i credentials dodaje się automatycznie)
+pass ls, pass show git/https/...
+
+APT (command line):
+sudo apt clean ==> clear the cache of the old/outdated packages
+sudo apt autoremove ==> remove unrequired packages
+sudo apt -f install ==> fix any failed/broken installs
+sudo apt remove program_name
+apt list --installed
+
+APT-GET (scripts)
+
+DPKG (interesting commands)
+https://ubuntu.com/server/docs/package-management
+ - list installed packages (dpkg -l)
+ - list files installed by a package (dpkg -L name)
+ - list which package installed 'this' file (dpkg -S /etc/file)
+ - remove program (dpkg -r program_name) not advised, not dependancy check
+installation from a .deb file:
+sudo apt install path_to_deb_file (calls dpkg underneath)
+sudo dpkg -i path_to_deb_file

@@ -1,0 +1,51 @@
+Instalacja Tex Live:
+ - na drugim dysku (/media/mav/apps)
+
+perl ./install-tl --no-interaction --texdir=/media/mav/apps/TexLive/
+
+dodać ścieżki:
+PATH="$PATH:/media/mav/apps/Applications/bin/x86_64-linux"
+export MANPATH="${MANPATH:+${MANPATH}:}/media/mav/apps/Applications//texmf-dist/doc/man"
+export INFOPATH="${INFOPATH:+${INFOPATH}:}/media/mav/apps/Applications//texmf-dist/doc/info"
+
+przez niedefaultową instalację mamy problem:
+( https://tex.stackexchange.com/questions/321911/no-formats-available-after-installation-of-texlive )
+kpathsea: Running mktexfmt xelatex.fmt
+mktexfmt [INFO]: did not find entry for xelatex
+(+ inny problem z pdflatexem)
+rozwiązanie (dla Terminala):
+export TEXMF=.:/media/mav/apps/Applications//:
+albo dla TexStudio: https://superuser.com/questions/121261/how-can-i-set-environment-variables-for-a-graphical-login-on-linux
+
+
+problem przy usuwaniu:
+ - (running on Debian, switching to user mode!)
+cannot setup TLPDB in /home/mav/texmf at /usr/bin/tlexmf
+rozwiązanie:
+> tlmgr init-usertree
+> tlmgr uninstall --all
+
+ - https://tex.stackexchange.com/questions/663008/problems-after-installing-texlive-in-a-non-standard-location-and-how-to-uninsta
+
+
+
+flatpak override --user --filesystem=/media/mav/apps/SteamLibrary/ com.valvesoftware.Steam
+
+nano:
+
+pokaż numery linii: m-n (alt + n; nie działa)
+search forward: ctrl-w -> text -> n
+
+find command:
+find . -name "latex*"
+
+
+hardware/system info commends
+system:
+cat /etc/os-release
+
+hardware:
+cat proc/cpuinfo
+nvidia-smi
+findmnt (drives)
+

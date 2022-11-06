@@ -2,6 +2,8 @@ Instalacja Tex Live:
  - na drugim dysku (/media/mav/apps)
 
 perl ./install-tl --no-interaction --texdir=/media/mav/apps/TexLive/
+perl ./install-tl --no-interaction --no-doc-install --no-src-install
+
 
 dodać ścieżki:
 PATH="$PATH:/media/mav/apps/Applications/bin/x86_64-linux"

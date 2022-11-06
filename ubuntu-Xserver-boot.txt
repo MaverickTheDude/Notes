@@ -1,0 +1,28 @@
+grub:
+ESC (hold) po BIOS	 uruchamia grub2
+grub2> normal		 wracamy do menu wyboru systemu
+
+przetestowane opcje:
+
+ - boot-repair
+(reinstalacja grub2, wymuszenie menu grub przy bootowaniu Ubuntu)
+https://linuxconfig.org/ubuntu-22-04-not-booting-troubleshooting-guide
+Raport z pracy aplikacji:
+https://paste.ubuntu.com/p/TVrH4x8hF9/
+
+ - fscp
+(/dev/nvme0n1p2 is mounted - cannot continue)
+zadziałało z poziomu terminala sesji live (pendrive) -> wszystko jest ok
+https://www.howtogeek.com/196740/how-to-fix-an-ubuntu-system-when-it-wont-boot/
+
+ - grub2 command prompt
+(kernel panic: /dev/nvme0n1p2 not found -> WTF...)
+https://www.linuxfoundation.org/blog/blog/classic-sysadmin-how-to-rescue-a-non-booting-grub-2-on-linux
+
+ - grub2 -> ubuntu -> -e[dit] -> kernel += -nomodeset
+(gówno dało...)
+
+ - Ostateczna decyzja po przeczytaniu tego:
+https://wiki.ubuntu.com/X/Troubleshooting/BlankScreen
+problem jest z dupy, brak sensownego rozwiązania (żaden z tych mi nie pomógł)
+Wygląda jak fail Xservera po randomowej aktualizacji Ubuntu.

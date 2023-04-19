@@ -3,6 +3,16 @@ killall snap-store
 kasujesz randomowe gówno imagemagic -> wypierdziela inkscape'a...
 Brak sensownego odpowiednika Painta (Pinta - joke, gdzie kurwa resize)
 
+Grupy:
+https://www.linode.com/docs/guides/linux-users-and-groups/#what-is-the-difference-between-primary-and-secondary-groups-in-linux
+
+cat /etc/passwd
+id username
+groups username
+ - Add a user to a secondary group:
+sudo usermod -a -G second_example_group example_user
+
+
 
 DESKTOP SHORTCUT DESTINATIONS:
 /usr/share/applications/

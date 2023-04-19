@@ -1,3 +1,6 @@
+Thunderbird IMAP responded: User is authenticated but not connected 
+https://answers.microsoft.com/en-us/outlook_com/forum/all/thunderbird-imap-responded-user-is-authenticated/062a82f6-e678-4462-88b7-dd6cc318386f
+
 Instalacja Tex Live:
  - na drugim dysku (/media/mav/apps)
 
